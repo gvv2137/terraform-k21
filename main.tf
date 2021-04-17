@@ -7,6 +7,7 @@ resource "aws_instance" "k21-task" {
   instance_type = "t2.micro"
   key_name = "terraform-key"
   security_groups = ["${aws_security_group.task-sg.name}"]
+  associate_public_ip_address = true
 
 tags = {
     Name = "k21 Instance"
