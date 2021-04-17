@@ -1,5 +1,5 @@
 provider "aws" {
-  region     = "us-east-1"
+  region     = var.aws_reg
 }
 
 resource "aws_instance" "k21-task" {
